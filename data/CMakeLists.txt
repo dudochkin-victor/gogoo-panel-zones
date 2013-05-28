@@ -6,6 +6,6 @@ CONFIGURE_FILE(
   "${CMAKE_CURRENT_BINARY_DIR}/gogoo-panel-zones.desktop"
   IMMEDIATE @ONLY)
 INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/gogoo-panel-zones.desktop DESTINATION ${DATA_DIR}/panels)
-INSTALL(FILES people.png DESTINATION ${PKG_DATADIR}/gogoo-panle-zones/theme)
+INSTALL(FILES people.png DESTINATION ${PKG_DATADIR}/gogoo-panle-zones)
 
 
