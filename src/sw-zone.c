@@ -1085,9 +1085,10 @@ sw_zone_set_is_welcome (SwZone   *zone,
                                                    "x-align", MX_ALIGN_MIDDLE,
                                                    NULL);
 
-          actor = clutter_texture_new_from_file (PKGDATADIR "/people.png", NULL);
-
-          mx_box_layout_add_actor_with_properties (MX_BOX_LAYOUT (zone->priv->welcome),
+          actor = clutter_texture_new_from_file (DATADIR "/people.png", NULL);
+	  if (actor)
+	  {
+        	mx_box_layout_add_actor_with_properties (MX_BOX_LAYOUT (zone->priv->welcome),
                                                    actor, 1,
                                                    "y-align", MX_ALIGN_END,
                                                    "x-align", MX_ALIGN_END,
@@ -1095,6 +1096,7 @@ sw_zone_set_is_welcome (SwZone   *zone,
                                                    "x-fill", FALSE,
                                                    NULL);
 
+	    } else g_warning("no people.png at %s", DATADIR);
           clutter_actor_set_name (CLUTTER_ACTOR (zone), "welcome");
           mx_label_set_text (MX_LABEL (zone->priv->title), "");
         }

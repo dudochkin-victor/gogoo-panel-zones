@@ -1,5 +1,5 @@
 
-#include <config.h>
+//#include <config.h>
 
 #include <mx/mx.h>
 
@@ -528,7 +528,7 @@ main (int argc, char **argv)
   mpl_panel_clutter_init_with_gtk (&argc, &argv);
 
   mx_style_load_from_file (mx_style_get_default (),
-                           STYLEDIR "/switcher.css", NULL);
+                           THEMEDIR "/switcher.css", NULL);
 
   data->screen = wnck_screen_get_default ();
   wnck_screen_force_update (data->screen);
