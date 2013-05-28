@@ -12,7 +12,7 @@ SET(THEME_SRCS
 	close-button-hover.png
     )
 
-INSTALL(FILES ${THEME_SRCS} DESTINATION ${PKG_DATADIR}/gogoo-panle-zones/theme)
+INSTALL(FILES ${THEME_SRCS} DESTINATION ${PKG_DATADIR}/gogoo-panel-zones/theme)
 
 
 
